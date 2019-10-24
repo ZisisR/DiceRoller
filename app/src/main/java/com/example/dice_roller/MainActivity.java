@@ -57,30 +57,14 @@ public class MainActivity extends AppCompatActivity {
     }
     public void on_button_click(View view) {
         TextView tv = this.findViewById(R.id.numberTextView);
-        TextView inputBox = this.findViewById(R.id.inputBox);
-        TextView scoreBox = this.findViewById(R.id.scoreNumberTextView);
 
         Random r = new Random();
-        int number = r.nextInt(7);
-        int numberFromInputBox;
-        int score = Integer.parseInt(scoreBox.getText().toString());
+        int number = r.nextInt(6);
 
         tv.setText(Integer.toString(number));
 
-        try {
-            numberFromInputBox = Integer.parseInt(inputBox.getText().toString());
-            if (number == numberFromInputBox && numberFromInputBox >= 1 && numberFromInputBox <= 6) {
-                tv.setText("Congratulations");
-                score++;
-                scoreBox.setText(Integer.toString(score));
-            } else if (numberFromInputBox < 1 || numberFromInputBox > 6) {
-                tv.setText("Not a number between 1 and 6");
-            } else {
-                tv.setText(Integer.toString(number));
-            }
-        }catch (Exception e){
         }
 
     }
 
-}
+
