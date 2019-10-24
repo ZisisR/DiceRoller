@@ -76,14 +76,12 @@ public class MainActivity extends AppCompatActivity {
                 tv.setText("Not a number between 1 and 6");
             } else {
                 tv.setText(Integer.toString(number));
+            }
+            } catch(Exception e){
 
             }
-        } catch (Exception e) {
-
         }
     }
-}
-
 
 
 
