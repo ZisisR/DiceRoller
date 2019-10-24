@@ -55,16 +55,29 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
     public void on_button_click(View view) {
         TextView tv = this.findViewById(R.id.numberTextView);
+        TextView inputBox = this.findViewById(R.id.inputBox);
 
         Random r = new Random();
         int number = r.nextInt(6);
+        int numberFrominputBox;
 
         tv.setText(Integer.toString(number));
+        try {
+            numberFrominputBox = Integer.parseInt(inputBox.getText().toString());
+            if (number == numberFrominputBox && numberFrominputBox >= 1 && numberFrominputBox <= 6) {
+                tv.setText("Congratulations");
+
+
+            }
+
+        } catch (Exception e) {
 
         }
-
     }
+}
+
 
 
